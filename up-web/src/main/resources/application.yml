@@ -1,0 +1,20 @@
+server:
+  port: 8765
+spring:
+  profiles:
+    active: local
+  application:
+    name: framework-fun
+  datasource:
+    druid:
+      url: jdbc:mysql://10.225.229.53:3306/cloud?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useSSL=false
+      username: root
+      password: 123456
+      driver-class-name: com.mysql.jdbc.Driver
+      initial-size: 2
+      max-active: 6
+      max-wait: 60000
+      min-idle: 5
+      validation-query: SELECT 1
+      test-on-borrow: false
+      filters: stat
